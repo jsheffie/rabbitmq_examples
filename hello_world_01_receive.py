@@ -2,7 +2,7 @@ import pika
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 
-channel.queue_declare(queue='hello')
+channel.queue_declare(queue='hello') # named queue ( good for sharing betewen producer n concumer)
 
 print " [*] Waiting for messages. To exit press CTRL+C"
 
